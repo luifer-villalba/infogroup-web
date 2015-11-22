@@ -48,7 +48,7 @@
 						<div class="container clearfix">
 							<div class="slider-caption slider-caption-center">
 								<h2 data-caption-animate="fadeInUp">
-									<img src="img/infogroup-logo-frente.png" style="background-color:white; width: 50%; height: 50%; border-radius: 25px;">
+									<img src="img/infogroup-logo-frente.png" style="background-color:white; border-radius: 25px;">
 								</h2>
 								<!--<p data-caption-animate="fadeInUp" data-caption-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>-->
 							</div>
@@ -264,32 +264,32 @@
 
 					</div>
 
-					<div class="section dark parallax nobottommargin" style="padding: 80px 0;background-image: url('img/scroll-2000x1333.jpg');" data-stellar-background-ratio="0.3">
+					<div class="section parallax nobottommargin" style="padding: 80px 0;background-image: url('img/scroll-2000x1333.jpg');" data-stellar-background-ratio="0.3">
 
 						<div class="container clearfix">
 
 							<div class="col_one_fourth nobottommargin center" data-animate="bounceIn">
 								<i class="i-plain i-xlarge divcenter nobottommargin icon-heart"></i>
 								<div class="counter counter-lined"><span data-from="0" data-to="30" data-refresh-interval="50" data-speed="2000"></span>+</div>
-								<h5>Clientes Satisfechos</h5>
+								<h5><b>Clientes Satisfechos</b></h5>
 							</div>
 
 							<div class="col_one_fourth nobottommargin center" data-animate="bounceIn" data-delay="200">
 								<i class="i-plain i-xlarge divcenter nobottommargin icon-camera2"></i>
 								<div class="counter counter-lined"><span data-from="0" data-to="200" data-refresh-interval="100" data-speed="2500"></span>+</div>
-								<h5>Equipos</h5>
+								<h5><b>Equipos</b></h5>
 							</div>
 
 							<div class="col_one_fourth nobottommargin center" data-animate="bounceIn" data-delay="400">
 								<i class="i-plain i-xlarge divcenter nobottommargin icon-magic"></i>
 								<div class="counter counter-lined"></span>∞</div>
-								<h5>Soluciones</h5>
+								<h5><b>Soluciones</b></h5>
 							</div>
 
 							<div class="col_one_fourth nobottommargin center col_last" data-animate="bounceIn" data-delay="600">
 								<i class="i-plain i-xlarge divcenter nobottommargin icon-time"></i>
 								<div class="counter counter-lined"><span data-from="0" data-to="12" data-refresh-interval="30" data-speed="2700"></span>h</div>
-								<h5>Tiempo de respuesta</h5>
+								<h5><b>Tiempo de respuesta</b></h5>
 							</div>
 
 						</div>
@@ -921,7 +921,7 @@
 								<span>Nuestros clientes nos aman, nosotros tambien!</span>
 							</div>
 
-							<div class="fslider testimonial testimonial-full nobgcolor noborder noshadow nopadding dark" data-arrows="false">
+							<div class="fslider testimonial testimonial-full nobgcolor noborder noshadow nopadding" data-arrows="false">
 								<div class="flexslider">
 									<div class="slider-wrap">
 										<div class="slide">
@@ -1042,10 +1042,11 @@
 									$(form).ajaxSubmit({
 										target: '#contact-form-result',
 										success: function() {
+											var $form = $('#contact-form-result');
 											$('.form-process').fadeOut();
 											$('#template-contactform').find('.sm-form-control').val('');
-											$('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
-											SEMICOLON.widget.notifications($('#contact-form-result'));
+											$form.attr('data-notify-msg', $form.html()).html('');
+											SEMICOLON.widget.notifications($form);
 										}
 									});
 								}

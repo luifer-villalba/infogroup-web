@@ -9,6 +9,41 @@
 
 -----------------------------------------------------------------------------------*/
 
+.green-infogroup{
+	color: #BFD730;
+}
+
+@media only screen and (max-width: 320px) {
+	/* styles for narrow screens */
+	.slider-caption h2 img{
+		width: 50%;
+		height: 50%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	/* styles for wide screens */
+	.slider-caption h2 img{
+		width: 75%;
+		height: 75%;
+	}
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-moz-min-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+	/* styles for Retina-type displays */
+	.slider-caption h2 img{
+		width: 50%;
+		height: 50%;
+	}
+}
 
 dl, dt, dd, ol, ul, li {
 	margin: 0;
@@ -54,7 +89,7 @@ dl, dt, dd, ol, ul, li {
 
 body {
 	line-height: 1.5;
-	color: #555;
+	color: #000;
 	font-family: 'Lato', sans-serif;
 }
 
