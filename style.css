@@ -10,7 +10,15 @@
 	}
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-height: 899px) {
+	/* styles for wide screens */
+	.slider-caption h2 img{
+		width: 60%;
+		height: 60%;
+	}
+}
+
+@media only screen and (min-height: 900px) {
 	/* styles for wide screens */
 	.slider-caption h2 img{
 		width: 75%;
