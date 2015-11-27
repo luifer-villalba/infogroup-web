@@ -94,6 +94,10 @@
 
         ];
 
+        $scope.$watch('selected', function() {
+            $scope.calcularPresupuesto($scope.selected.cantidad);
+        });
+
         $scope.calcularPresupuesto = function(cantidad){
             if(cantidad === undefined) return;
             var materialesFijos = 0;
