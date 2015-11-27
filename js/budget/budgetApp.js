@@ -3,7 +3,7 @@
  */
 (function () {
 
-    var myApp = angular.module('pageApp', []);
+    var myApp = angular.module('pageApp', ['ngTouch']);
 
     //.controller('ReviewController', ['$scope', '$http', 'filterFilter', function ($scope, $http, filterFilter) {
     myApp.controller("budgetController", ['$scope', '$http', function ($scope, $http) {
@@ -21,7 +21,6 @@
             // this callback will be called asynchronously
             // when the response is available
             var data = response.data;
-            console.log(data);
             var cambiosChaco = data.dolarpy.cambioschaco;
             $scope.cambioVenta = cambiosChaco.venta;
         }, function errorCallback(response) {
@@ -96,6 +95,7 @@
         ];
 
         $scope.calcularPresupuesto = function(cantidad){
+            if(cantidad === undefined) return;
             var materialesFijos = 0;
             //Costo unitario de cámaras
             var costoCam = 0;

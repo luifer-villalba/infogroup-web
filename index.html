@@ -27,6 +27,7 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript" src="js/angularjs.min.js"></script>
+    <script type="text/javascript" src="js/angular-touch.min.js"></script>
     <script type="text/javascript" src="js/budget/budgetApp.js"></script>
 
     <!-- Document Title
@@ -352,7 +353,7 @@
                              data-delay="600">
                             <i class="i-plain i-xlarge divcenter nobottommargin icon-time"></i>
 
-                            <div class="counter counter-lined">&gt;<span data-from="0" data-to="12"
+                            <div class="counter counter-lined">&lt;<span data-from="0" data-to="12"
                                                                      data-refresh-interval="30"
                                                                      data-speed="2700"></span>h
                             </div>
@@ -1021,7 +1022,7 @@
                         <form class="nobottommargin" id="template-presupuesto" name="template-contactform">
 
                             <div class="form-process"></div>
-
+                            <pre>{{selected}}</pre>
                             <div class="col_one_third">
                                 <label for="presupuesto-cant-camaras">Cantidad de Cámaras</label>
                                 <select id="presupuesto-cant-camaras"
@@ -1065,12 +1066,15 @@
                         </form>
                     </div>
 
-
-                    <a class="alert alert-warning" href="#section-contacto" style="cursor: pointer">
-                        <i class="icon-warning-sign"></i><strong>Atención!</strong> Estos precios son una
-                        estimación, podría tener ligeros cambios. En caso de no encontrar una opción
-                        que vaya de acorde a su problema, no dude en contactarnos.
-                    </a>
+                    <div class="postcontent nobottommargin clearfix">
+                        <div class="style-msg infomsg">
+                            <div class="sb-msg">
+                                <i class="icon-info-sign"></i><strong>Atención!</strong> Estos precios son una
+                                estimación, podría tener ligeros cambios. En caso de no encontrar una opción
+                                que vaya de acorde a su problema, no dude en contactarnos.
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
